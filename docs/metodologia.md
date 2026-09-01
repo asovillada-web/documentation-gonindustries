@@ -9,9 +9,9 @@ Research breve si hay incertidumbre
   ↓
 Decisión registrada si afecta alcance, arquitectura u ownership
   ↓
-Tarea Ready con owner y Definition of Done
-  ↓
-Implementación pequeña → Review simple o verificación directa del Lead → Playtest → Fixes
+Tarea Pending clara, sin owner y con Definition of Done
+  ↓ alguien disponible la toma
+In Progress con owner → Review simple o verificación directa del Lead → Playtest → Fixes
   ↓
 Done + documento actualizado si el comportamiento real cambió
 ```
@@ -21,14 +21,17 @@ Done + documento actualizado si el comportamiento real cambió
 | Estado | Significado |
 |---|---|
 | `Backlog` | Idea válida, pero no comprometida ahora |
-| `Ready` | Clara, cabe en el sprint y toda dependencia aparece `✅ Terminada` en `#progreso` |
+| `Pending` | Accionable y visible para todos, pero todavía sin owner |
+| `Ready` | Ya asignada a una persona, pero todavía no iniciada |
 | `In Progress` | El owner está trabajando; máximo una principal por persona |
 | `Review` | Implementación acabada, pendiente de review/playtest |
 | `Done` | Definition of Done comprobada por otra persona |
 
 Si una tarea se bloquea, no se marca `Done` parcial: se anota el bloqueo y se divide o replanifica.
 
-**Empezar tarea** abre automáticamente el ticket. El owner puede entregar con un botón sin formulario. Si el Lead ya verificó todos los `Done when` en Studio, llamada o pantalla compartida, puede aprobar directamente desde `In Progress`; esto reduce escritura repetida, pero no elimina la verificación real.
+Codex mantiene una cola corta con trabajo de implementación, research, preparación o diseño que realmente mueva el proyecto. En `#tareas`, **Tareas pendientes** muestra las opciones disponibles. Una persona solo puede tomar una si no tiene otra `Ready`, `In Progress` o `Review`, y no puede tomar una donde sea reviewer. Las tareas ya asignadas siguen siendo su primer compromiso.
+
+**Empezar tarea** abre automáticamente el ticket de una tarea asignada. **Tomar** asigna una Pending, la mueve a `In Progress` y también abre su ticket. El owner puede entregar con un botón sin formulario. Si el Lead ya verificó todos los `Done when` en Studio, llamada o pantalla compartida, puede aprobar directamente desde `In Progress`; esto reduce escritura repetida, pero no elimina la verificación real.
 
 Antes de presionar **Empezar tarea**, el owner revisa `#progreso`. Si la tarjeta nombra una dependencia, no comienza hasta verla como `✅ Terminada`. El Lead evita publicar como `Ready` una tarea bloqueada; el canal hace visible la regla, pero no reemplaza ese control de planificación.
 
