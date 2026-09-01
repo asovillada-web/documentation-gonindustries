@@ -8,7 +8,7 @@ El Project Lead terminó la estructura base `Workspace/Prototype`. El equipo ya 
 
 - **Project Lead:** campo de práctica y zonas separadas — `Done`.
 - **Enrico:** tres obstáculos greybox — `Ready`.
-- **Dhrystone:** hazard que mata y reinicia — `Ready`.
+- **Dhrystone:** hazard que mata y reinicia — `Review`; entrega enviada, pendiente de decisión del Lead.
 - **Vekatorke:** checkpoint individual — `Ready`.
 - **Machuc:** prueba de escala de rata con Parts — `Ready`.
 
