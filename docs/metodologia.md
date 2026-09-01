@@ -29,7 +29,17 @@ Done + documento actualizado si el comportamiento real cambió
 
 Si una tarea se bloquea, no se marca `Done` parcial: se anota el bloqueo y se divide o replanifica.
 
-Codex mantiene una cola corta con trabajo de implementación, research, preparación o diseño que realmente mueva el proyecto. En `#tareas`, **Tareas pendientes** muestra las opciones disponibles. Una persona solo puede tomar una si no tiene otra `Ready`, `In Progress` o `Review`, y no puede tomar una donde sea reviewer. Las tareas ya asignadas siguen siendo su primer compromiso.
+Codex mantiene una cola corta con trabajo de implementación, research, preparación o diseño que realmente mueva el proyecto. En `#tareas`, **Tareas pendientes** muestra las opciones disponibles. Una persona solo puede tomar una si no tiene otra `Ready`, `In Progress` o `Review`. Al tomarla, el sistema elige al azar un reviewer entre los otros cuatro miembros. Las tareas ya asignadas siguen siendo su primer compromiso.
+
+Antes de publicar una Pending, debe quedar claro:
+
+1. qué problema o pregunta del milestone actual resuelve;
+2. qué resultado concreto deja y quién lo usará después;
+3. que puede hacerse en paralelo sin editar ownership ajeno ni depender de trabajo incompleto;
+4. que cabe en una sesión pequeña y tiene `Done when` verificable;
+5. qué fuentes oficiales necesita si es research técnico.
+
+Si no cumple estas condiciones, permanece `Backlog`. Mantener muchas opciones nunca justifica adelantar assets, custom characters o sistemas antes de obtener evidencia del prototipo actual.
 
 **Empezar tarea** abre automáticamente el ticket de una tarea asignada. **Tomar** asigna una Pending, la mueve a `In Progress` y también abre su ticket. El owner puede entregar con un botón sin formulario. Si el Lead ya verificó todos los `Done when` en Studio, llamada o pantalla compartida, puede aprobar directamente desde `In Progress`; esto reduce escritura repetida, pero no elimina la verificación real.
 
@@ -43,7 +53,7 @@ Antes de presionar **Empezar tarea**, el owner revisa `#progreso`. Si la tarjeta
 **What:** Qué cambia.
 **Why:** Qué problema del sprint resuelve.
 **Owner:** Una persona.
-**Reviewer:** Otra persona.
+**Reviewer:** Otra persona; para Pending se asigna al azar al tomarla.
 **Difficulty:** Easy / Medium / Hard.
 **Status:** Backlog / Ready / In Progress / Review / Done.
 **Dependencies:** Tareas o “ninguna”.
