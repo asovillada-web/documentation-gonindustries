@@ -1,6 +1,8 @@
 # Brief canónico del proyecto
 
-Última actualización: 2026-08-29.
+Última actualización: 2026-09-10.
+
+**Alcance vigente:** [stages 1–5](sprints/stages-1-5.md) dentro de una pared. Ya hay rata animada, HUD y greybox modificable. El Lead lleva colección/economía por separado; el equipo se centra en recorrido, sistemas, ambiente y pruebas. Las opciones exploratorias debajo no son features comprometidas.
 
 ## Proyecto y propósito
 
@@ -82,7 +84,7 @@ Feature creep, sistemas grandes antes de una vertical slice, overengineering, cl
 
 ## Herramientas candidatas
 
-Roblox Studio es obligatorio. Discord, Git/GitHub, Studio `Script Sync`, VS Code, Blender y el bot se adoptan gradualmente según su utilidad. Rojo, Luau tooling, paquetes, CI/CD, Open Cloud y automatización de publicación quedan como opciones futuras, no como requisitos de inicio. La comparación investigada vive en [research/workflow-roblox.md](research/workflow-roblox.md).
+Roblox Studio es obligatorio. Discord, Git/GitHub, Studio `Script Sync`, VS Code, Blender y el bot se adoptan gradualmente según su utilidad. El Lead ya usa Rojo en su proyecto separado y adapta la sincronización al trabajo compartido. No es requisito para los demás; tampoco se exige Script Sync. Luau tooling, paquetes, CI/CD, Open Cloud y automatización de publicación no se añaden sin necesidad. La comparación investigada vive en [research/workflow-roblox.md](research/workflow-roblox.md).
 
 ## Propiedad y publicación
 

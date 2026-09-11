@@ -1,95 +1,36 @@
-# Workflow de desarrollo
+# Metodología del equipo
 
-## Del idea al Done
+Recuperada del handbook y ajustada por decisión del Lead el 2026-09-10.
 
-```text
-Idea
-  ↓ filtro: diversión / alcance / rat identity / aprendizaje
-Research breve si hay incertidumbre
-  ↓
-Decisión registrada si afecta alcance, arquitectura u ownership
-  ↓
-Tarea Pending clara, sin owner y con Definition of Done
-  ↓ alguien disponible la toma
-In Progress con owner → Review simple o verificación directa del Lead → Playtest → Fixes
-  ↓
-Done + documento actualizado si el comportamiento real cambió
-```
+**Idea → research cuando haga falta → acuerdo → tarea → implementación → review/playtest → correcciones → Done.** Actualizamos documentación solo si cambia algo que merezca conservarse.
 
-## Estados
+## Etapa actual: frentes compartidos
 
-| Estado | Significado |
-|---|---|
-| `Backlog` | Idea válida, pero no comprometida ahora |
-| `Pending` | Accionable y visible para todos, pero todavía sin owner |
-| `Ready` | Ya asignada a una persona, pero todavía no iniciada |
-| `In Progress` | El owner está trabajando; máximo una principal por persona |
-| `Review` | Implementación acabada, pendiente de review/playtest |
-| `Done` | Definition of Done comprobada por otra persona |
+Cada frente tiene un responsable que coordina, colaboradores, objetivo, dificultad, dependencias y resultado observable. Todos los cinco pueden leer el ticket, aportar y comentar la revisión. Solo el Lead aprueba y cierra. Un coordinador no tiene que hacer todo el trabajo.
 
-Si una tarea se bloquea, no se marca `Done` parcial: se anota el bloqueo y se divide o replanifica.
+- **Ready:** disponible, todavía sin iniciar. El ticket compartido ya existe.
+- **In Progress:** responsable o colaborador empezó; máximo un frente principal en curso por coordinador. Apoyo puntual en otro frente no significa asumirlo completo.
+- **Review:** entrega final del frente, pendiente de feedback/aprobación. Un avance parcial se comparte como mensaje, no mueve toda la tarea a Review.
+- **Done:** el Lead comprobó los criterios y aprobó; ticket a Historial, sin perder evidencia.
+- **Backlog:** fuera del compromiso actual. Las tareas retiradas se archivan sin declarar que fueron completadas.
 
-Codex mantiene una cola corta con trabajo de implementación, research, preparación o diseño que realmente mueva el proyecto. En `#tareas`, **Tareas pendientes** muestra las opciones disponibles. Una persona solo puede tomar una si no tiene otra `Ready`, `In Progress` o `Review`. Al tomarla, el sistema elige al azar un reviewer entre los otros cuatro miembros. Las tareas ya asignadas siguen siendo su primer compromiso.
+## Trabajo cotidiano
 
-Antes de publicar una Pending, debe quedar claro:
+1. Mirar #progreso y el contexto del frente. Acordar quién toca cada sección o Script.
+2. Proponer una sección pequeña, construir/probar y compartir el avance; extender cuando funcione.
+3. Cualquier miembro comenta problemas y sugerencias. Autor y colaboradores entregan con un botón, sin formulario/checklist automático.
+4. El Lead puede aprobar desde In Progress si ya comprobó el resultado; **Pedir cambios** desde Review devuelve al mismo ticket.
 
-1. qué problema o pregunta del milestone actual resuelve;
-2. qué resultado concreto deja y quién lo usará después;
-3. que puede hacerse en paralelo sin editar ownership ajeno ni depender de trabajo incompleto;
-4. que cabe en una sesión pequeña y tiene `Done when` verificable;
-5. qué fuentes oficiales necesita si es research técnico.
+Las dependencias de inicio impiden comenzar; las de cierre permiten preparación y pruebas parciales. En esta etapa G1-01 requiere G1-02 Done para cerrarse y G1-04 requiere G1-01/02/03 Done. No se crea un ciclo que impida trabajar en paralelo.
 
-Si no cumple estas condiciones, permanece `Backlog`. Mantener muchas opciones nunca justifica adelantar assets, custom characters o sistemas antes de obtener evidencia del prototipo actual.
+## Calidad común
 
-**Empezar tarea** abre automáticamente el ticket de una tarea asignada. **Tomar** asigna una Pending, la mueve a `In Progress` y también abre su ticket. El owner puede entregar con un botón sin formulario. Si el Lead ya verificó todos los `Done when` en Studio, llamada o pantalla compartida, puede aprobar directamente desde `In Progress`; esto reduce escritura repetida, pero no elimina la verificación real.
+Otra persona prueba el cambio; Output sin errores nuevos en el camino probado; Server & Clients si afecta progreso compartido; PC/móvil para recorrido y UI. Registrar qué se probó y qué falta. No esconder pendientes bajo un Done.
 
-Antes de presionar **Empezar tarea**, el owner revisa `#progreso`. Si la tarjeta nombra una dependencia, no comienza hasta verla como `✅ Terminada`. El Lead evita publicar como `Ready` una tarea bloqueada; el canal hace visible la regla, pero no reemplaza ese control de planificación.
+Todo cambio sobre objetos o scripts ajenos se coordina. Los cuatro compañeros usan Studio en Windows. Solo el Lead usa Rojo y adapta su sincronización; nadie debe instalarlo para trabajar. Conservar versiones y no sobrescribir trabajo compartido.
 
-## Plantilla de tarea
+## Planificación sin saturar
 
-```md
-### S1-XX — Verbo + resultado observable
+El siguiente objetivo es [stages 1–5](sprints/stages-1-5.md), no 50/100 etapas ni un framework. Revisar avances cada semana sin exigir todo terminado en una semana. Codex prepara/actualiza tareas durante nuestras sesiones; no se promete generación autónoma continua.
 
-**What:** Qué cambia.
-**Why:** Qué problema del sprint resuelve.
-**Owner:** Una persona.
-**Reviewer:** Otra persona; para Pending se asigna al azar al tomarla.
-**Difficulty:** Easy / Medium / Hard.
-**Status:** Backlog / Ready / In Progress / Review / Done.
-**Dependencies:** Tareas o “ninguna”.
-
-**Learning (máximo 30–45 min):**
-- Concepto necesario y fuente concreta.
-
-**Done when:**
-- Resultado observable 1.
-- Resultado observable 2.
-- Playtest realizado y Output sin errores nuevos.
-```
-
-## Definition of Done común
-
-- Cumple todos los criterios específicos de la tarea.
-- Otra persona revisó o jugó el cambio.
-- No aparecen errores nuevos en Studio Output durante el camino probado.
-- Si toca client/server, se probó con Server & Clients, no solo `Play`.
-- Si toca input/UI, se hace al menos una prueba con Device/Controller Emulator cuando corresponda.
-- No incluye secretos, scripts desconocidos ni trabajo fuera de alcance.
-- El documento relevante describe lo que realmente existe.
-
-## Git sin ceremonia excesiva
-
-- `main` representa documentación y herramientas utilizables.
-- Una branch corta por tarea basada en archivos: `feat/s1-03-hazard`, `docs/ownership` o `fix/checkpoint-respawn`.
-- Commits pequeños que expliquen intención.
-- Pull request breve con: qué, cómo probar y captura/log si aporta valor.
-- Un reviewer distinto antes de mergear. GitHub documenta que las pull requests permiten discutir y revisar antes de integrar: [About pull requests](https://docs.github.com/en/pull-requests/get-started/about-pull-requests).
-
-Los cambios 3D realizados solo dentro de Team Create no aparecen mágicamente en Git. Su trazabilidad se mantiene con ownership de tarea, notas de publicación y Activity/Version History de Roblox. Los scripts entrarán a Git mediante `Script Sync` cuando se configure.
-
-## Cadencia mínima
-
-- Inicio de sprint: 20 minutos para objetivo, dependencias y owners.
-- Durante: updates asíncronos solo cuando cambia estado o existe bloqueo.
-- Playtest final: 30–45 minutos; cada persona deja **un problema observado** y **una cosa que funcionó**.
-- Cierre: decidir `Done`, mover lo incompleto sin esconderlo y registrar solo decisiones que importan.
+La cola individual con reviewer al azar queda como mecanismo disponible para tareas pequeñas futuras; **no es el modelo activo de estos cuatro frentes**. Antes de ampliar backlog, comprobar que la nueva tarea aporta a la meta y no duplica trabajo.

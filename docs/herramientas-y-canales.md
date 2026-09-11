@@ -16,12 +16,12 @@ Es el hub de trabajo diario:
 - `#desarrollo`: dudas y coordinación técnica.
 - `#arte-y-diseno`: modeling, referencias y feedback visual.
 - `#tareas`: panel para consultar y comenzar trabajo.
-- Tickets privados: entrega, evidencia, review y cambios pedidos.
+- Tickets de frentes: compartidos por los cinco, privados frente a visitantes. Avances, evidencia y review en el mismo lugar; solo el Lead cierra.
 
 Flujo del ticket:
 
 ```text
-Ver mis tareas → Empezar tarea → trabajar y dejar evidencia
+Frentes del equipo → contexto → Empezar frente → avances y pruebas
 → Entregar tarea → Review → Aprobar y cerrar / Pedir cambios
 ```
 
@@ -33,8 +33,8 @@ Este repositorio conserva la documentación versionada y buscable. Discord enlaz
 
 ## Herramientas opcionales
 
-- **Rojo/Script Sync:** piloto del Lead para trabajar con Luau como archivos; todavía no es requisito del equipo.
+- **Rojo:** solo el Lead lo usa en su proyecto separado. Él adapta el sync a los demás, que trabajan directamente en Studio; avisen antes de editar el mismo Script. Script Sync no es requisito.
 - **VS Code:** útil al trabajar con archivos, no necesario para construir Parts en Studio.
-- **Blender:** se introduce cuando un asset real lo necesite; el primer prototype usa Parts.
+- **Blender:** útil para adaptar o crear assets cuando haga falta. Ya hay candidatos revisados por el Lead; revisen primero qué pueden reutilizar.
 
 No añadimos CI/CD, paquetes, frameworks ni publicación automática mientras no resuelvan un problema actual.

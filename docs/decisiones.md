@@ -37,7 +37,20 @@ Estados: `Aceptada` (decisión explícita), `Propuesta` (requiere confirmación 
 | D-031 | 2026-08-30 | Aceptada | **Empezar tarea** crea el ticket automáticamente. El owner entrega con un solo botón y sin formulario; el Lead puede usar **Aprobar y cerrar** desde `In Progress` si ya verificó el resultado, o esperar `Review` y conservar **Pedir cambios**. | La evidencia puede estar en el ticket, Studio, llamada o pantalla compartida; exigir tres campos siempre añadía fricción sin mejorar todas las reviews. La base de datos sigue registrando cada transición y solo el Lead puede marcar `Done`. |
 | D-032 | 2026-08-30 | Aceptada | La documentación de consulta del equipo vivirá en un repositorio de GitHub separado del juego. `#empieza-aqui` tendrá un embed con un link button hacia ese handbook; Roblox Studio conservará únicamente contenido del juego. Hasta crear y poblar el repo separado, este repositorio sigue siendo la fuente canónica. | Mantiene metodología, propósito, requisitos y decisiones buscables y versionadas sin meter texto administrativo en Studio. La transición explícita evita dos fuentes de verdad. |
 
-## Decisiones para steps futuros
+## Dirección vigente — 2026-09-10
+
+Las siguientes decisiones del Lead reemplazan las reglas iniciales que entren en conflicto:
+
+- Recuperar esta metodología ligera y dejar RAT RUSH como experimento histórico, no juego del equipo.
+- Terminar stages 1–5 dentro de una pared; el greybox existente es completamente modificable. Ya hay rata animada y HUD.
+- Plataformas: Enrico/Machuc, prioridad máxima. Sistemas: Dhrystone/Vekator. Ambiente: Machuc, prioridad secundaria. Integración: Vekator/Dhrystone; no sobrecargar Enrico.
+- El Lead trabaja solo en colección/economía y usa Rojo por separado; se adapta al equipo Studio. Nadie más necesita Rojo ni agentes.
+- Cuatro tickets compartidos desde Ready. Todos aportan y comentan reviews; responsables/colaboradores inician y entregan. Solo Lead aprueba/cierra o pide cambios de estado.
+- Avances parciales en mensajes. G1-01 cierra después de G1-02; G1-04 después de G1-01/02/03. Pruebas parciales desde ahora.
+- Cuerda: investigación aislada después de estabilidad. Integrarla no es requisito de esta entrega.
+- Tareas iniciales completas según el Lead; tickets conservados en Historial. Pending antiguas retiradas, no falsamente completadas.
+
+## Propuestas históricas para revisar cuando hagan falta
 
 1. Acordar por escrito recuperación de la cuenta owner, salida de miembros y criterio futuro de reparto.
 2. Confirmar los requisitos de collaboration/age verification en el próximo step, cuando probemos acceso desde Studio; no forman parte de la tarea actual de unirse al Group.
