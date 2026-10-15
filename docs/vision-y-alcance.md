@@ -1,8 +1,8 @@
 # Brief canónico del proyecto
 
-Última actualización: 2026-09-10.
+Última actualización: 2026-10-14.
 
-**Alcance vigente:** [stages 1–5](sprints/stages-1-5.md) dentro de una pared. Ya hay rata animada, HUD y greybox modificable. El Lead lleva colección/economía por separado; el equipo se centra en recorrido, sistemas, ambiente y pruebas. Las opciones exploratorias debajo no son features comprometidas.
+**Alcance vigente:** [cocina 6–15](sprints/kitchen-6-15.md), preservando 1–5. Enrico/Machuc: diseño y ambiente; Dhrystone/Vekator: respawn/sistemas e integración. Base modificable, referencias y piloto primero. Organizar Explorer sin romper referencias. Colección/economía/guardado quedan con el Lead. Las ideas exploratorias no son features comprometidas.
 
 ## Proyecto y propósito
 

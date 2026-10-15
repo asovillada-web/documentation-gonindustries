@@ -2,6 +2,8 @@
 
 Documentación viva de **Obby but You're a Rat**, el primer juego de Gon Industries.
 
+**Etapa vigente (2026-10-14):** [cocina stages 6–15](docs/sprints/kitchen-6-15.md). G1 completada según el Lead. Dos parejas, piloto antes de extender e ideas nuevas pendientes de validar.
+
 Somos cinco amigos aprendiendo game development con Roblox Studio. Nuestro objetivo no es construir el sistema más grande: queremos aprender trabajando, organizarnos bien y terminar un juego pequeño, gracioso y jugable.
 
 ## Empieza aquí

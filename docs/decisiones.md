@@ -37,7 +37,15 @@ Estados: `Aceptada` (decisión explícita), `Propuesta` (requiere confirmación 
 | D-031 | 2026-08-30 | Aceptada | **Empezar tarea** crea el ticket automáticamente. El owner entrega con un solo botón y sin formulario; el Lead puede usar **Aprobar y cerrar** desde `In Progress` si ya verificó el resultado, o esperar `Review` y conservar **Pedir cambios**. | La evidencia puede estar en el ticket, Studio, llamada o pantalla compartida; exigir tres campos siempre añadía fricción sin mejorar todas las reviews. La base de datos sigue registrando cada transición y solo el Lead puede marcar `Done`. |
 | D-032 | 2026-08-30 | Aceptada | La documentación de consulta del equipo vivirá en un repositorio de GitHub separado del juego. `#empieza-aqui` tendrá un embed con un link button hacia ese handbook; Roblox Studio conservará únicamente contenido del juego. Hasta crear y poblar el repo separado, este repositorio sigue siendo la fuente canónica. | Mantiene metodología, propósito, requisitos y decisiones buscables y versionadas sin meter texto administrativo en Studio. La transición explícita evita dos fuentes de verdad. |
 
-## Dirección vigente — 2026-09-10
+## Dirección vigente — 2026-10-14
+
+- Lead confirma los cuatro frentes G1 completados; se archivan sin borrar evidencia.
+- Publicar dos frentes de cocina 6–15: Enrico/Machuc (diseño, ambiente, recorrido y Explorer), Dhrystone/Vekator (respawn, sistemas e integración).
+- Propuesta visual y piloto antes de extender. Cantidad de obstáculos y layout modificables; no regenerar encima de trabajo manual.
+- Ideas nuevas solo pasan a trabajo pendiente tras validación del Lead. Colección/economía/guardado siguen con él.
+- G2-01 cierra tras G2-02; G2-02 prueba la ruta construida sin esperar Done de G2-01. Todos revisan; solo Lead cierra.
+
+## Dirección anterior — 2026-09-10
 
 Las siguientes decisiones del Lead reemplazan las reglas iniciales que entren en conflicto:
 
